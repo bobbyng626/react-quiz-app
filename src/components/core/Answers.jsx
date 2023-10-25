@@ -43,7 +43,7 @@ class Answers extends Component {
     }
     clearClasses(){
         this.setState({
-            classNames: ['', '', '', '']
+            classNames: ['', '']
         })
         
     }
@@ -70,15 +70,7 @@ class Answers extends Component {
                     <span>B</span> 
                     <p>{answers[1]}</p></li>
 
-                    <li onClick={this.checkAnswer} 
-                        className={classNames[2]} data-id="3">
-                    <span>C</span> 
-                    <p>{answers[2]}</p></li>
-
-                    <li onClick={this.checkAnswer} 
-                        className={classNames[3]} data-id="4">
-                    <span>D</span> 
-                    <p>{answers[3]}</p></li>
+                    {/* <p>{answers[3]}</p></li> */}
                 </ul>
             </div>
         );

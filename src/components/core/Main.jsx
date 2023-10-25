@@ -29,9 +29,7 @@ class Main extends Component {
         this.setState({
             question: data[count].question,
             answers: [  data[count].answers[0], 
-                        data[count].answers[1], 
-                        data[count].answers[2], 
-                        data[count].answers[3] 
+                        data[count].answers[1],
                     ],
             correct: data[count].correct,
             count: this.state.count + 1
