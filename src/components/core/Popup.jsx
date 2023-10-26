@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MyButton from '../util/MyButton.jsx';
 import Fade from 'react-reveal/Fade';
-import crystalBall from "../../assets/img.png";
+import crystalBall from "../../assets/01_crystal_ball.png";
 
 class Popup extends Component {
     
@@ -25,7 +25,7 @@ class Popup extends Component {
             this.setState({
                 time: 'end',
                 title: 'Congratulations!',
-                buttonText: 'Restart'
+                buttonText: 'Completed'
             });
 
             //alert("START THE QUIZ");

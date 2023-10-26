@@ -101,16 +101,16 @@ class Main extends Component {
                     isAnswered={questionAnswered} 
                     increaseScore={this.handleIncreaseScore}
                 />
-                {count === total ? 'Finish quiz' : 'Next question'}
+                {/* {count === total ? 'Finish quiz' : ''} */}
 
 
-                {/* <div id="submit">
+                <div id="submit">
                     {showButton ? 
                     <button className="fancy-btn" 
                             onClick={this.nextQuestion} >
-                    {count === total ? 'Finish quiz' : 'Next question'}
+                    {count === total ? 'Finish quiz' : ''}
                     </button> : <span></span>}
-                </div> */}
+                </div>
             </div>
         </div>
 
