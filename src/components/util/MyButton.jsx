@@ -11,9 +11,9 @@ const MyButton = (props) => {
             style={{
                 background: props.bck,
                 color: props.color,
-                margin: '20px',
+                margin: '80px',
                 padding: '10px',
-
+                
             }}
         >
         {props.text}

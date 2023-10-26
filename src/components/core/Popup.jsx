@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import MyButton from '../util/MyButton.jsx';
 import Fade from 'react-reveal/Fade';
+import crystalBall from "../../assets/img.png";
+
 class Popup extends Component {
     
     constructor(props) {
@@ -8,9 +10,9 @@ class Popup extends Component {
         
         this.state = {
             time: 'start',
-            title: 'Welcome to React Quiz',
-            text: 'This is a quiz application built using ReactJS. <br /><br />',
-            buttonText: 'Start the quiz' 
+            title: 'Welcome to Caelusium Quest',
+            text: 'This is a mysterious journey into Caelusium world <br /><br />',
+            buttonText: 'Start' 
         };
         
         this.popupHandle = this.popupHandle.bind(this);
@@ -60,14 +62,15 @@ class Popup extends Component {
                 <div className="popup-container" style={style}>
                     <div className="container">
                         <div className="ml-5 col-md-10 col-10">
-                            <div className="popup">
-                                <h1>{title}</h1>
-                                <p dangerouslySetInnerHTML={this.createMarkup(text)} />
-                                <span onClick={this.popupHandle}>
+                            <div className="popup"  style={{backgroundImage: `url(${crystalBall})`}}>
+                                {/* <h1>{title}</h1> */}
+                                {/* <p dangerouslySetInnerHTML={this.createMarkup(text)} /> */}
+                                <span onClick={this.popupHandle} style={{textAlign: 'center'}}>
                                     <MyButton
                                         text={buttonText}
                                         bck='#FF9800'
                                         color='#fff'
+                                        className="popupButton"
                                     />
                                 </span>
                             </div>
