@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import '../../resources/questions.css'
 class Answers extends Component {
     constructor(props) {
         super(props);
@@ -49,8 +49,8 @@ class Answers extends Component {
     }
     render() {
         let { answers } = this.props;
+        let { images } = this.props;
         let { classNames } = this.state;
-        
         let transition = {
             transitionName: "example",
             transitionEnterTimeout: 500,
@@ -62,15 +62,29 @@ class Answers extends Component {
                 <ul>
                     <li onClick={this.checkAnswer} 
                         className={classNames[0]} data-id="1">
-                    <span>A</span> 
-                    <p>{answers[0]}</p></li>
+                    {/* <span>A</span>  */}
+                    <div className="image-container">
+                        <img 
+                            src=""
+                            alt="Image description"
+                            className="quiz-image"
+                        />
+                    </div>
+                    {/* <p>{}</p> */}
+                    </li>
 
                     <li onClick={this.checkAnswer} 
                         className={classNames[1]} data-id="2">
-                    <span>B</span> 
-                    <p>{answers[1]}</p></li>
-
-                    {/* <p>{answers[3]}</p></li> */}
+                    {/* <span>B</span>  */}
+                    <div className="image-container">
+                        <img 
+                            src=""
+                            alt="Image description"
+                            className="quiz-image"
+                        />
+                    </div>
+                    {/* <p>{}</p> */}
+                    </li>
                 </ul>
             </div>
         );

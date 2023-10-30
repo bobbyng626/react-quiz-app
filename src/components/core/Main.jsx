@@ -32,6 +32,9 @@ class Main extends Component {
                         data[count].answers[1],
                     ],
             correct: data[count].correct,
+            images: [   data[count].images[0], 
+                        data[count].images[1],
+                    ],
             count: this.state.count + 1
         });
     }
@@ -75,10 +78,10 @@ class Main extends Component {
 
   render() {
 
-    let { count, total, question, answers, correct, showButton, questionAnswered, displayPopup, score} = this.state;
+    let { count, total, question, answers, images, correct, showButton, questionAnswered, displayPopup, score} = this.state;
 
     return (
-      <div className="container">
+      <div className="container content-container">
        
        <Popup style={{display: displayPopup}} 
              score={score} 
@@ -89,13 +92,14 @@ class Main extends Component {
         <div className="row">
             <div className="col-lg-12 col-md-10">
                 <div id="question">
-                    <h4 className="bg-light">Question {count}/{total}</h4>
+                    {/* <h4 className="bg-light">Question {count}/{total}</h4> */}
                     <p>{question}</p>
                 </div>
 
                 <Answers 
                     answers={answers} 
                     correct={correct} 
+                    images={images}
                     // showButton={this.handleShowButton} 
                     showButton={this.nextQuestion} 
                     isAnswered={questionAnswered} 
